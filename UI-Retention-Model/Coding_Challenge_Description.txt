@@ -1,0 +1,88 @@
+Backend Coding Challenge
+
+Instructions
+
+The SDK (software development kit) is currently integrated in
+over 400 mobile games. A user playing one of these games may elect to
+record and share a gameplay video. The
+sharing process involves pulling up our UI screen, which enables the user
+to share to various social networks, watch other videos, and make a
+profile.
+
+
+One of the metrics we use to measure the performance of our SDK is
+Day­7 UI retention​. We define Day­7 UI retention as the percent of users
+who re­open the UI exactly 7 days after the date of their first
+UI open. Note that whether a user re­opens the UI on
+Day 6 or Day 8 is irrelevant to this metric.
+
+
+For example, say we were looking to measure Day­7 UI retention over the
+first two days of October 2014. Twenty users opened the UI for
+the first time on 10/1. On 10/8, four of these twenty users re­opened the
+UI. On 10/2, five users opened the UI for the first time and two
+of these users re­opened the UI on 10/9. The SDK’s Day­7 UI retention
+from 10/1 to 10/2 would then be (4+2) / (20+5) = 24%.
+
+
+Attached is a csv file with sample SDK data from a subset of users who
+began using the SDK in September. The fields provided are:
+
+● user_id
+● event_name
+● event_count
+● event_time
+● os_name
+● sdk_version
+
+
+○ Opening the UI has event_name UI_OPEN_COUNT
+○ Represents the number of times an event occurred
+
+
+We would like you to perform the following:
+
+1. Design a model for the data that is designed to allow a user to query
+for Day­7 UI retention over a day range, as well as allow for filtering
+on a specific OS name and SDK version.
+
+
+2. Write a script that reads the data from the csv file into your model.
+
+
+3. Use your model to answer the following questions:
+
+a. What was the overall Day­7 UI Retention over the month of
+September?
+
+b. What was the Day­7 UI Retention from September 8 through
+September 10 for the Android SDK?
+
+c. What was the Day­7 UI Retention over the month of
+September for version 1.7.5 of the iOS SDK?
+
+
+Please submit the code for your script and model, as well as the answers
+(retention rate, numerator and denominator of it) to the above questions.
+For the purpose of this challenge you can assume that all open UI events
+by these users are represented in this data set. If you make any
+additional assumptions on the data, please state them.
+
+Programming language and restrictions
+Use can use your favorite language for this coding challenge, we prefer
+Java or Python. You may import modules to help read and parse the csv
+file, but the internal model should be a class of your own design.
+
+
+Evaluation
+
+We’ll evaluate your submission on the following criteria:
+
+1. Correctness
+
+2. Code quality, readability, and extensibility
+
+3. Design of internal model
+
+4. Time is not a major factor, but we would like to know how long you
+spent

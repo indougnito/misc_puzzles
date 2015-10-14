@@ -1,0 +1,17 @@
+acc - analytics coding challenge
+
+Utility to parse a particular event log format, and to compute n-day UI retention.
+
+Execution:
+ python acc.py
+
+Requirements:
+ csv file must exist as "accdata.csv" in local directory.
+
+Design:
+
+ For each user, within a time period of one month*, we store the set of dates on which the user opens the UI. Specifically, this is a map of <user_id> to some <set of dates>.
+
+ To compute n-day retention, we iterate over all users within the time period. For each user, take the earliest known date, d0, from the set of active dates, and say that was the acquisition date for the user. For each n, add n to d0, and check if the set also contains (d0 + n). If so, increment the aggregate n-day retention count (across all users) for d0.
+
+ *: there's an arbitrary time range involved in the mapping, which I've effectively set to one month in the code (since that's range for which I have data, anyway).
