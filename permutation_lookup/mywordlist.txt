@@ -1,0 +1,8 @@
+abc
+cba
+efe
+bacd
+fef
+ba
+ggg
+bac
